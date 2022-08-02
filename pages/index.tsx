@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import TextBox from '../components/textBox';
 import HeroText from '../components/heroText';
 import DownloadBox from '../components/downloadBox';
+import PhotoBox from '../components/photoBox';
+
+import headshot from '../public/assets/headshot.jpg';
 
 const BoxOne = styled.div`
   grid-area: 'one';
@@ -48,7 +51,7 @@ const Home: NextPage = () => {
   return (
     <>
       <HeroText text='Zach Cossman' area='one' />
-      <BoxTwo>this is box two</BoxTwo>
+      <PhotoBox image={headshot} area='two' />
       <TextBox area='three' content={gig} theme=''>
         <p className='body'>
           <br />
