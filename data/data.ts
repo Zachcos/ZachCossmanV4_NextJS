@@ -33,11 +33,11 @@ const videoData: VideoDataProps[] = [
   },
 ];
 
-const headshotsData: headshotDataProps[] = [
-  { path: '/assets/headshot_1jpg', index: 1 },
-  { path: '/assets/headshot_2jpg', index: 2 },
-  { path: '/assets/headshot_3jpg', index: 3 },
-  { path: '/assets/headshot_4jpg', index: 4 },
+const headshotsData: HeadshotDataProps[] = [
+  { path: '/assets/headshot_1.jpg', index: 1 },
+  { path: '/assets/headshot_2.jpg', index: 2 },
+  { path: '/assets/headshot_3.jpg', index: 3 },
+  { path: '/assets/headshot_4.jpg', index: 4 },
 ];
 
 export { videoData, headshotsData };
