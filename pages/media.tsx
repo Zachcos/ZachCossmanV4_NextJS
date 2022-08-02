@@ -1,13 +1,16 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import { GetStaticProps } from 'next';
+import Image from 'next/image';
 import styled from 'styled-components';
-import LightGallery from 'lightgallery/react';
-import lgVideo from 'lightgallery/plugins/video';
 import { color, device, font } from '../data/variables';
 import DownloadBox from '../components/downloadBox';
 import VideoBox from '../components/videoBox';
+import { videoData, headshotsData } from '../data/data';
 
 // import video from '../public/assets/ncl_thumbnail.mp4';
 
+import LightGallery from 'lightgallery/react';
+import lgVideo from 'lightgallery/plugins/video';
 import 'lightgallery/css/lg-video.css';
 import 'lightgallery/css/lightgallery.css';
 
@@ -49,64 +52,31 @@ const Wrapper = styled.div`
   }
 `;
 
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      headshots: headshotsData,
+      videos: videoData,
+    },
+  };
+};
+
 interface Props {
-  data: {
-    images: {
-      edges: {
-        node: ImageProps[];
-        filter: Function;
-      };
-    };
-    videos: {
-      edges: {
-        node: VideoProps[];
-        map: Function;
-      };
-    };
-  };
+  headshots: HeadshotDataProps[];
+  videos: VideoDataProps[];
 }
 
-interface ImageProps {
-  node: {
-    id: string;
-    original: {
-      src: string;
-    };
-    gatsbyImageData: any;
-  };
-}
-
-interface VideoProps {
-  node: {
-    id: string;
-    title: string;
-    artist: string;
-    findMe: string;
-    videoUrl: string;
-  };
-}
-
-const Media = ({ data }: Props) => {
-  // const allImages = data.images.edges;
-  // const allVideos = data.videos.edges;
+const Media: NextPage<Props> = ({ headshots, videos }) => {
   return (
     <>
       <Wrapper>
         <h2 className='gallery-header'>Headshots</h2>
         <LightGallery elementClassNames='gallery gallery--photo'>
-          {/* {allImages
-            .filter((item: ImageProps) =>
-              item.node.original.src.includes('headshot')
-            )
-            .map((img: ImageProps) => (
-              <a
-                data-src={img.node.original.src}
-                key={img.node.id}
-                className='thumb'
-              >
-                <GatsbyImage image={img.node.gatsbyImageData} alt='headshot' />
-              </a>
-            ))} */}
+          {headshots.map((item: HeadshotDataProps) => (
+            <a data-src={item.path} key={item.index}>
+              <Image src={item.path} width={100} height={100} alt='' />
+            </a>
+          ))}
         </LightGallery>
         <h2 className='gallery-header'>Covers</h2>
         <LightGallery
@@ -114,25 +84,11 @@ const Media = ({ data }: Props) => {
           plugins={[lgVideo]}
           autoplayVideoOnSlide
         >
-          {/* {allVideos.map((item: VideoProps) => {
-            const current = item.node.findMe;
-            return allImages
-              .filter((item2: ImageProps) =>
-                item2.node.original.src.includes(current)
-              )
-              .map((item2: ImageProps) => (
-                <a
-                  data-src={item.node.videoUrl}
-                  key={item.node.id}
-                  className='thumb'
-                >
-                  <GatsbyImage
-                    image={item2.node.gatsbyImageData}
-                    alt={item.node.title}
-                  />
-                </a>
-              ));
-          })} */}
+          {videos.map((item: VideoDataProps) => (
+            <a data-src={item.videoUrl} key={item.index}>
+              <Image src={item.thumbUrl} width={100} height={100} alt='' />
+            </a>
+          ))}
         </LightGallery>
       </Wrapper>
       <VideoBox video='#' area='four' />
