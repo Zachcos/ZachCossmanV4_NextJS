@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import TextBox from '../components/textBox';
+import HeroText from '../components/heroText';
 
 const BoxOne = styled.div`
   grid-area: 'one';
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
     'Zach is currently playing Ren McCormack in Footloose on the Norwegian Joy.';
   return (
     <>
-      <BoxOne>this is box one</BoxOne>
+      <HeroText text='Zach Cossman' area='one' />
       <BoxTwo>this is box two</BoxTwo>
       <TextBox area='three' content={gig} theme=''>
         <p className='body'>
