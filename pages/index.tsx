@@ -6,7 +6,7 @@ import DownloadBox from '../components/downloadBox';
 import PhotoBox from '../components/photoBox';
 import VideoBox from '../components/videoBox';
 
-import headshot from '../public/assets/headshot.jpg';
+import headshot from '../public/assets/headshot_1.jpg';
 // import video from '../public/assets/ncl_thumbnail.mp4';
 
 const Home: NextPage = () => {
