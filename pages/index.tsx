@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 import TextBox from '../components/textBox';
 import HeroText from '../components/heroText';
+import DownloadBox from '../components/downloadBox';
 
 const BoxOne = styled.div`
   grid-area: 'one';
@@ -56,8 +57,7 @@ const Home: NextPage = () => {
         </p>
       </TextBox>
       <BoxFour>this is box four</BoxFour>
-      <BoxFive>this is box five</BoxFive>
-      <BoxSix>this is box six</BoxSix>
+      <DownloadBox area='five' theme='dark' />
     </>
   );
 };
