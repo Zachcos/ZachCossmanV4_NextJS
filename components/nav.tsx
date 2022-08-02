@@ -28,6 +28,7 @@ const NavIcon = styled(motion.div)`
   position: absolute;
   top: 0;
   width: 70px;
+  z-index: 100;
   .line-wrapper {
     width: 35px;
     span {
