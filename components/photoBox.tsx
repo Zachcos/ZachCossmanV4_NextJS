@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { device } from '../data/variables';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 const Wrapper = styled.div`
   overflow: hidden;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 `;
 
 interface Props {
-  image: string;
+  image: StaticImageData;
   area: string;
 }
 
