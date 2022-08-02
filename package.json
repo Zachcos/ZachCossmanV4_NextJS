@@ -10,11 +10,11 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "framer-motion": "^6.5.1",
+    "lightgallery": "^2.5.0",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "lightgallery": "^2.5.0",
-    "framer-motion": "^6.5.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
@@ -26,5 +26,8 @@
     "eslint-config-next": "12.2.3",
     "prettier": "^2.5.1",
     "typescript": "^4.5.2"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
