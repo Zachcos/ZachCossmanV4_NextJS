@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
-import styled from 'styled-components';
 import TextBox from '../components/textBox';
 import HeroText from '../components/heroText';
 import DownloadBox from '../components/downloadBox';
@@ -9,31 +8,6 @@ import VideoBox from '../components/videoBox';
 
 import headshot from '../public/assets/headshot.jpg';
 // import video from '../public/assets/ncl_thumbnail.mp4';
-
-const BoxOne = styled.div`
-  grid-area: 'one';
-  background: red;
-`;
-const BoxTwo = styled.div`
-  grid-area: 'two';
-  background: blue;
-`;
-const BoxThree = styled.div`
-  grid-area: 'three';
-  background: green;
-`;
-const BoxFour = styled.div`
-  grid-area: 'four';
-  background: salmon;
-`;
-const BoxFive = styled.div`
-  grid-area: 'five';
-  background: grey;
-`;
-const BoxSix = styled.div`
-  grid-area: 'six';
-  background: yellow;
-`;
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -61,7 +35,6 @@ const Home: NextPage = () => {
           <br />
         </p>
       </TextBox>
-      {/* <VideoBox video={video} area='four' /> */}
       <VideoBox video='#' area='four' />
       <DownloadBox area='five' theme='dark' />
     </>
