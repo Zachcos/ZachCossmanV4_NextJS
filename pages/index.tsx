@@ -5,8 +5,10 @@ import TextBox from '../components/textBox';
 import HeroText from '../components/heroText';
 import DownloadBox from '../components/downloadBox';
 import PhotoBox from '../components/photoBox';
+import VideoBox from '../components/videoBox';
 
 import headshot from '../public/assets/headshot.jpg';
+// import video from '../public/assets/ncl_thumbnail.mp4';
 
 const BoxOne = styled.div`
   grid-area: 'one';
@@ -59,7 +61,8 @@ const Home: NextPage = () => {
           <br />
         </p>
       </TextBox>
-      <BoxFour>this is box four</BoxFour>
+      {/* <VideoBox video={video} area='four' /> */}
+      <VideoBox video='#' area='four' />
       <DownloadBox area='five' theme='dark' />
     </>
   );
