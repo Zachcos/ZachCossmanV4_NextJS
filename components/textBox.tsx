@@ -67,11 +67,21 @@ const Wrapper = styled.div`
       img {
         height: 150px;
         margin-right: 20px;
-        width: 150px;
+        width: 90px;
+      }
+      &--inner {
+        display: block;
+        width: 30%;
+      }
+      span {
+        position: relative;
       }
       .zcd,
       .asa {
         transition: color 0.15s ease-out;
+      }
+      .asa {
+        margin-left: 20px;
       }
     }
   }
