@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import styled from 'styled-components';
+import TextBox from '../components/textBox';
 
 const BoxOne = styled.div`
   grid-area: 'one';
@@ -33,11 +34,26 @@ const Home: NextPage = () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     console.log('this is the vh value: ', vh);
   });
+
+  const gig = {
+    heading: 'Footloose',
+    subheading: 'Norwegian Cruise Lines',
+    subnote: 'Mon, May 23th',
+  };
+
+  const blurb =
+    'Zach is currently playing Ren McCormack in Footloose on the Norwegian Joy.';
   return (
     <>
       <BoxOne>this is box one</BoxOne>
       <BoxTwo>this is box two</BoxTwo>
-      <BoxThree>this is box three</BoxThree>
+      <TextBox area='three' content={gig} theme=''>
+        <p className='body'>
+          <br />
+          {blurb}
+          <br />
+        </p>
+      </TextBox>
       <BoxFour>this is box four</BoxFour>
       <BoxFive>this is box five</BoxFive>
       <BoxSix>this is box six</BoxSix>
