@@ -41,6 +41,7 @@ const Wrapper = styled.div`
     margin-bottom: 50px;
     width: 100%;
     a.thumb {
+      display: block;
       margin: 10px 5px;
       max-height: 125px;
       max-width: 125px;
@@ -73,8 +74,15 @@ const Media: NextPage<Props> = ({ headshots, videos }) => {
         <h2 className='gallery-header'>Headshots</h2>
         <LightGallery elementClassNames='gallery gallery--photo'>
           {headshots.map((item: HeadshotDataProps) => (
-            <a data-src={item.path} key={item.index}>
-              <Image src={item.path} width={100} height={100} alt='' />
+            <a data-src={item.path} key={item.index} className='thumb'>
+              <Image
+                src={item.path}
+                width={125}
+                height={125}
+                objectFit='cover'
+                objectPosition='top center'
+                alt=''
+              />
             </a>
           ))}
         </LightGallery>
@@ -85,8 +93,8 @@ const Media: NextPage<Props> = ({ headshots, videos }) => {
           autoplayVideoOnSlide
         >
           {videos.map((item: VideoDataProps) => (
-            <a data-src={item.videoUrl} key={item.index}>
-              <Image src={item.thumbUrl} width={100} height={100} alt='' />
+            <a data-src={item.videoUrl} key={item.index} className='thumb'>
+              <Image src={item.thumbUrl} width={125} height={125} alt='' />
             </a>
           ))}
         </LightGallery>
