@@ -51,11 +51,7 @@ const VideoBox = ({ video, area }: Props) => {
   return (
     <Wrapper style={{ gridArea: area }}>
       <LightGallery plugins={[lgVideo]}>
-        <a
-          href='https://youtu.be/M7OKn9vBj9M'
-          aria-label='video clip'
-          data-src='https://youtu.be/M7OKn9vBj9M'
-        >
+        <a aria-label='video clip' data-src='https://youtu.be/M7OKn9vBj9M'>
           <Play />
           <video src={video} autoPlay loop muted playsInline />
         </a>
