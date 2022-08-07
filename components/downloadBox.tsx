@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { color, font } from '../data/variables';
 
-// import resume from '../public/assets/ZachCossman.pdf';
 import { Download } from './icons';
 
 const Wrapper = styled.div`
@@ -102,7 +101,7 @@ const DownloadBox = ({ area, theme }: Props) => {
     <Wrapper style={{ gridArea: area, ...style }}>
       <h2 className='heading'>Download</h2>
       <h3 className='subheading'>headshot/resume</h3>
-      <a href='#' target='_blank' rel='noreferrer'>
+      <a href='/assets/ZachCossman.pdf' target='_blank' rel='noreferrer'>
         <div className='download'>
           <Download />
           Zach Cossman Resume
