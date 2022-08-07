@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { useEffect } from 'react';
 import TextBox from '../components/textBox';
 import HeroText from '../components/heroText';
 import DownloadBox from '../components/downloadBox';
@@ -7,7 +6,6 @@ import PhotoBox from '../components/photoBox';
 import VideoBox from '../components/videoBox';
 
 import headshot from '../public/assets/headshot_1.jpg';
-// import video from '../public/assets/ncl_thumbnail.mp4';
 
 const Home: NextPage = () => {
   const gig = {
@@ -29,7 +27,7 @@ const Home: NextPage = () => {
           <br />
         </p>
       </TextBox>
-      <VideoBox video='#' area='four' />
+      <VideoBox video='/assets/ncl_thumbnail.mp4' area='four' />
       <DownloadBox area='five' theme='dark' />
     </>
   );
