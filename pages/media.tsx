@@ -7,8 +7,6 @@ import DownloadBox from '../components/downloadBox';
 import VideoBox from '../components/videoBox';
 import { videoData, headshotsData } from '../data/data';
 
-// import video from '../public/assets/ncl_thumbnail.mp4';
-
 import LightGallery from 'lightgallery/react';
 import lgVideo from 'lightgallery/plugins/video';
 import 'lightgallery/css/lg-video.css';
@@ -99,7 +97,7 @@ const Media: NextPage<Props> = ({ headshots, videos }) => {
           ))}
         </LightGallery>
       </Wrapper>
-      <VideoBox video='#' area='four' />
+      <VideoBox video='/assets/ncl_thumbnail.mp4' area='four' />
       <DownloadBox area='five' theme='dark' />
     </>
   );
