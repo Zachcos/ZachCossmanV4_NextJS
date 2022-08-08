@@ -32,7 +32,7 @@ interface Props {
 
 const HeroText = ({ area, text }: Props) => {
   return (
-    <NameBox style={{ gridArea: area }}>
+    <NameBox style={{ gridArea: area }} id='heroText'>
       <div className='container'>
         <h1>{text}</h1>
       </div>
