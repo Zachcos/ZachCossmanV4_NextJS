@@ -15,7 +15,6 @@ const NavWrapper = styled(motion.div)`
   min-height: 70px;
   position: fixed;
   top: 0;
-  z-index: 100;
 `;
 
 const NavIcon = styled(motion.div)`
@@ -29,7 +28,6 @@ const NavIcon = styled(motion.div)`
   position: absolute;
   top: 0;
   width: 70px;
-  z-index: 200;
   .line-wrapper {
     width: 35px;
     span {
